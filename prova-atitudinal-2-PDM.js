@@ -98,16 +98,17 @@ function mostraAluno() {
     })
 }
 
-function alunosAprovados (chamadaDeAlunos) {
-    if (chamadaDeAlunos.materias.nota >=6 && chamadaDeAlunos.materias.presenca >=75) {
-        console.log(chamadaDeAlunos.nome + " passou")
-    }
+function alunosAprovados() {
+    return chamadaDeAlunos.filter(aluno => {
+        return aluno.materias.every(materia => materia.nota >= 6 && materia.presenca >= 75);
+    });
 }
 
-function alunosReprovados (chamadaDeAlunos) {
-    if (chamadaDeAlunos.materias.nota <=6 && chamadaDeAlunos.materias.presenca <=75) {
-        console.log(chamadaDeAlunos.nome + " não passou")
-    }
+// Mostrar apenas os alunos reprovados nas matérias
+function alunosReprovados() {
+    return chamadaDeAlunos.filter(aluno => {
+        return aluno.materias.some(materia => materia.nota < 6 || materia.presenca < 75);
+    });
 }
 
 function getMaxOfArray(chamadaDeAlunos){
