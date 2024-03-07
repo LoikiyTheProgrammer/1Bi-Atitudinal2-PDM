@@ -104,7 +104,6 @@ function alunosAprovados() {
     });
 }
 
-// Mostrar apenas os alunos reprovados nas matérias
 function alunosReprovados() {
     return chamadaDeAlunos.filter(aluno => {
         return aluno.materias.some(materia => materia.nota < 6 || materia.presenca < 75);
