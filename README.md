@@ -1,1 +1,2 @@
-# Prova-PDM2-Daniel-Savala-Lhoretti-Mario-Andrade-Netto
+# Atitudinal-2-PDM
+Daniel Savala Lhoretti; Mario Andrade Netto
